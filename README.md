@@ -1,41 +1,43 @@
 # KK — M5Stack StopWatch Avatar
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 [![Build firmware](https://github.com/Trentct/m5stack-stopwatch-avatar/actions/workflows/build.yml/badge.svg)](https://github.com/Trentct/m5stack-stopwatch-avatar/actions/workflows/build.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
 
 Meet **KK** — a tiny expressive face living inside the M5Stack StopWatch.
 
-KK 是一个运行在 M5Stack StopWatch 圆形 AMOLED 屏幕上的程序化表情角色。所有眼睛、眼皮、眉线、关键帧和过渡均由 C++ 实时绘制，不依赖图片序列帧。产品画面保持纯黑背景，并针对 466 × 466 圆屏优化了尺寸、局部刷新和交互范围。
+KK is a procedural avatar built for the M5Stack StopWatch's circular AMOLED display. Its eyes, eyelids, brows, keyframes and transitions are drawn in real time with C++, without image-frame animation. The pure-black visual system is optimized for the 466 × 466 circular screen, partial updates and direct interaction.
 
 > Community project. Not affiliated with or endorsed by M5Stack.
 
 ## Highlights
 
-- 12 种程序化表情：`idle`、`listening`、`thinking`、`happy`、`excited`、`curious`、`confused`、`angry`、`surprised`、`sad`、`sleepy`、`dizzy`；
-- 60 fps 目标渲染，使用动态脏矩形降低 AMOLED 刷新开销；
-- 点击、双击、长按、连续触摸跟随和上下/左右滑动；
-- 加速度计与陀螺仪共同驱动倾斜跟随，眼睛先移动、头部稍后跟随；
-- 连续 4 次强力左右往复摇动触发旋涡眩晕；
-- A/B 实体键浏览表情，震动马达提供反馈；
-- A+B 长按进入硬件诊断；
-- 串口语义命令可作为未来语音识别或外部控制模块的统一入口。
+- 12 procedural expressions: `idle`, `listening`, `thinking`, `happy`, `excited`, `curious`, `confused`, `angry`, `surprised`, `sad`, `sleepy` and `dizzy`;
+- 60 fps target rendering with dynamic dirty rectangles to reduce AMOLED transfer work;
+- tap, double tap, long press, continuous touch tracking, and horizontal/vertical swipes;
+- accelerometer and gyroscope fusion for tilt tracking, with the eyes leading and the head following;
+- four strong alternating horizontal shakes trigger a looping spiral-eyed dizzy reaction;
+- A/B buttons browse expressions, with vibration feedback;
+- hold A+B to enter hardware diagnostics;
+- semantic serial commands provide a stable input boundary for future voice recognition or external control.
 
 ## Interaction map
 
 | Input | Result |
 | --- | --- |
-| 单击 | `happy` |
-| 双击 | `surprised` |
-| 按住并移动 | 眼睛和头部连续跟随触点 |
-| 长按 | `angry` |
-| 左右滑动 | 跟手预览并切换相邻表情 |
-| 向上 / 向下滑动 | `surprised` / `sleepy` |
-| 缓慢倾斜 | 视线按倾斜方向连续移动 |
-| 4 次强力左右往复摇动 | 循环 `dizzy`，停稳后恢复 |
-| A / B | 上一个 / 下一个表情 |
-| 长按 A+B | 进入 / 退出硬件诊断 |
+| Tap | `happy` |
+| Double tap | `surprised` |
+| Hold and move | Eyes and head continuously follow the touch point |
+| Long press | `angry` |
+| Swipe left / right | Preview and switch to the adjacent expression |
+| Swipe up / down | `surprised` / `sleepy` |
+| Slowly tilt the device | Gaze continuously follows the tilt direction |
+| Four strong alternating horizontal shakes | Loop `dizzy`, then recover after the device settles |
+| A / B | Previous / next expression |
+| Hold A+B | Enter / exit hardware diagnostics |
 
-`idle`、`listening` 和 `thinking` 是可持续停留的基础状态。其他反应播放完成后会返回触发前的基础状态，而不是固定回到待机。
+`idle`, `listening` and `thinking` are persistent base states. Other reactions return to the previously active base state when their animation finishes instead of always returning to idle.
 
 ## Hardware
 
