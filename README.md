@@ -1,11 +1,11 @@
-# M5Stack StopWatch Avatar
+# KK — M5Stack StopWatch Avatar
 
 [![Build firmware](https://github.com/Trentct/m5stack-stopwatch-avatar/actions/workflows/build.yml/badge.svg)](https://github.com/Trentct/m5stack-stopwatch-avatar/actions/workflows/build.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
 
-An expressive, monochrome procedural avatar firmware for the M5Stack StopWatch.
+Meet **KK** — a tiny expressive face living inside the M5Stack StopWatch.
 
-这是一个运行在 M5Stack StopWatch 圆形 AMOLED 屏幕上的程序化表情设备。所有眼睛、眼皮、眉线、关键帧和过渡均由 C++ 实时绘制，不依赖图片序列帧。产品画面保持纯黑背景，并针对 466 × 466 圆屏优化了尺寸、局部刷新和交互范围。
+KK 是一个运行在 M5Stack StopWatch 圆形 AMOLED 屏幕上的程序化表情角色。所有眼睛、眼皮、眉线、关键帧和过渡均由 C++ 实时绘制，不依赖图片序列帧。产品画面保持纯黑背景，并针对 466 × 466 圆屏优化了尺寸、局部刷新和交互范围。
 
 > Community project. Not affiliated with or endorsed by M5Stack.
 

@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve M5Stack StopWatch Avatar.
+Thanks for helping improve KK and M5Stack StopWatch Avatar.
 
 ## Before opening a change
 
