@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a reproducible firmware, rendering, or interaction problem.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: commit
+    attributes:
+      label: Firmware commit
+      description: Commit hash or release version running on the device.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Display or animation
+        - Touch or swipe
+        - Tilt or shake
+        - Buttons
+        - Vibration
+        - Build or upload
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include the exact device interaction sequence.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Device evidence
+      description: Add sanitized serial output and a short video when relevant. Remove ports, MAC addresses and credentials.
